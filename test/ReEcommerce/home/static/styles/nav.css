@@ -8,10 +8,7 @@
 }
 
 :root {
-    --bg-color: #222327;
-    --bg-color1: #222327;
     --text-color: #fff;
-    /* --main-color: #29fd53; */
     --main-color: rgb(17, 219, 255);
 }
 
@@ -35,7 +32,6 @@ nav{
 .logo {
     display: flex;
     align-items: center;
-    /* background-image: url(REC.png); */
 }
 
 .logo i {
@@ -56,24 +52,11 @@ nav{
     justify-content: space-between;
 }
 
-/* .search-bar{
-    display: flex;
-    position: relative;
-    height: 30px;
-    width: 70vh;
-    margin-top: -15px;
-    border-radius: 7px;
-    border-color: #fff;
-    border-width: 1.5px;
-    background-color: var(--bg-color);
-} */
-
 .box {
     height: 40px;
     display: flex;
     cursor: pointer;
     padding: 15px 15px 15px 15px;
-    /* padding: 10px 15px; */
     background: #fff;
     border-radius: 30px;
     align-items: center;
@@ -112,11 +95,6 @@ nav{
     font-size: 1.3rem;
 }
 
-/* .Rent:hover {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-} */
-
 .navbar a {
     color: var(--text-color);
     font-size: 1rem;
@@ -142,20 +120,8 @@ nav{
     text-shadow: 2px 5px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* .Location i,
-.Contact i {
-    color: #fff;
-    font-size: 28px;  
-} */
-
-/* .Contact i{
-    color: var(--main-color);
-    font-size: 28px;
-} */
-
 .main {
     display: flex;
-    /* margin-top: -20px; */
     align-items: center;
 }
 
@@ -174,7 +140,6 @@ nav{
 }
 
 .main a {
-    /* margin-right: 25px; */
     margin-left: 25px;
     color: var(--text-color);
     font-size: 1rem;

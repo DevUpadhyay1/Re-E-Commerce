@@ -11,7 +11,7 @@ setInterval(function(){
     document.getElementById('radio' + counter).checked = true;
     counter++;
 
-    if(counter > 4)
+    if(counter > 7)
     {
         counter=1;
     }
