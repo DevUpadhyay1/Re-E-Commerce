@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
@@ -6,8 +7,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="Rental E-Commerce">
-    <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="{% static 'styles/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/index.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,7 +74,7 @@
 
 
         <div class="section">
-            <div class="image"><img src="main-2.jpg" alt=""></div>
+            <div class="image"><img src="{% static 'images/main-2.jpg' %}" alt=""></div>
             
             <section>
                 
@@ -90,22 +91,22 @@
                         <input type="radio" name="radio-btn" id="radio7">
         
                         <div class="slide first">
-                            <img src="banglow.png" alt="">
+                            <img src="{% static 'images/banglow.png' %}" alt="">
                         </div>
                         <div class="slide">
-                            <img src="CarRental.png" alt="">
+                            <img src="{% static 'images/CarRental.png' %}" alt="">
                         </div>
                         <div class="slide">
-                            <img src="Furniturerental.png" alt="">
+                            <img src="{% static 'images/Furniturerental.png' %}" alt="">
                         </div>
                         <div class="slide">
-                            <img src="banglow.png" alt="">
+                            <img src="{% static 'images/banglow.png' %}" alt="">
                         </div>
                         <div class="slide">
-                            <img src="CarRental.png" alt="">
+                            <img src="{% static 'images/CarRental.png' %}" alt="">
                         </div>
                         <div class="slide">
-                            <img src="Furniturerental.png" alt="">
+                            <img src="{% static 'images/Furniturerental.png' %}" alt="">
                         </div>
                         <div class="slide">
                             <img src="banglow.png" alt="">
