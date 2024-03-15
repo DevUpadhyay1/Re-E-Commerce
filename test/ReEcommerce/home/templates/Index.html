@@ -17,84 +17,111 @@
     <script src="https://kit.fontawesome.com/1b798a1e6d.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@500;600&display=swap" rel="stylesheet">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var slides = $(".slide");
+                for (var i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        });
+    </script>
+
 </head>
 
 <body>
 
 
-        
-        <nav class="Navbar">
-            <a href="index.html" class="logo">
-                <i class="ri-home-heart-fill"></i>
-                <span>REC</span>
-                <!-- <img class="img-logo" src="REC.png"> -->
-            </a>
 
-            <ul class="navbar">
-                <div class="box">
-                    <input type="text" placeholder="Search...">
-                    <a href="#"><i class="fas fa-search"></i></a>
-                </div>
-                <div class="div1">
-                    <li><a href="#" class="Location">
+    <nav class="Navbar">
+        <a href="index.html" class="logo">
+            <i class="ri-home-heart-fill"></i>
+            <span>REC</span>
+            <!-- <img class="img-logo" src="REC.png"> -->
+        </a>
+
+        <ul class="navbar">
+            <div class="box">
+                <input type="text" placeholder="Search...">
+                <a href="#"><i class="fas fa-search"></i></a>
+            </div>
+            <div class="div1">
+                <li><a href="#" class="Location">
                         <!-- <i class="ri-map-pin-2-fill"></i> -->
                         Location</a></li>
-                </div>
-                <div class="div1">
-                    <li><a href="#" class="Contact">
+            </div>
+            <div class="div1">
+                <li><a href="#" class="Contact">
                         <!-- <i class="ri-contacts-book-3-fill"></i> -->
                         Contact Us</a></li>
-                </div>
-                <div class="div1">
-                    <li><a href="#" class="Notification">
+            </div>
+            <div class="div1">
+                <li><a href="#" class="Notification">
                         <!-- <i class="ri-contacts-book-3-fill"></i> -->
                         Notification</a></li>
-                </div>
-                
-            </ul>
-
-            <div class="main">
-                <div class="div2">
-                    <a href="#" class="user">
-                        <!-- <i class="ri-user-fill"></i> -->
-                        Login</a>
-                    <!-- <div class="Social-Icons"> -->
-                </div>
-                <div class="div2">
-                    <a href="#" class="Rent">
-                        <!-- <i class="ri-add-circle-fill"></i> -->
-                        Rent</a>
-                    <!-- </div> -->
-                </div>
-                
-                <div class="bx bx-menu" id="menu-icon"></div>
-
             </div>
-            
-        </nav>
+
+        </ul>
+
+        <div class="main">
+            <div class="div2">
+                <a href="#" class="user">
+                    <!-- <i class="ri-user-fill"></i> -->
+                    Login</a>
+                <!-- <div class="Social-Icons"> -->
+            </div>
+            <div class="div2">
+                <a href="#" class="Rent">
+                    <!-- <i class="ri-add-circle-fill"></i> -->
+                    Rent</a>
+                <!-- </div> -->
+            </div>
+
+            <div class="bx bx-menu" id="menu-icon"></div>
+
+        </div>
+
+    </nav>
 
 
-        <div class="section">
-            <div class="image"><img src="{% static 'images/main-2.jpg' %}" alt=""></div>
-            
-            <section>
-                
-                <div class="slider">
-    
-                    <div class="slides">
-        
+    <div class="section">
+        <div class="image"><img src="{% static 'images/main-2.jpg' %}" alt=""></div>
+
+        <section>
+
+            <div class="slider">
+
+                <div class="slides">
+                    <!--         
                         <input type="radio" name="radio-btn" id="radio1">
                         <input type="radio" name="radio-btn" id="radio2">
                         <input type="radio" name="radio-btn" id="radio3">
                         <input type="radio" name="radio-btn" id="radio4">
                         <input type="radio" name="radio-btn" id="radio5">
                         <input type="radio" name="radio-btn" id="radio6">
-                        <input type="radio" name="radio-btn" id="radio7">
-        
-                        <div class="slide first">
-                            <img src="{% static 'images/banglow.png' %}" alt="">
-                        </div>
-                        <div class="slide">
+                        <input type="radio" name="radio-btn" id="radio7"> -->
+
+                    {% for image in image_paths %}
+                    <div class="slide first">
+                        <img src="{% static image %}" alt="">
+                    </div>
+                    {% endfor %}
+
+                    <div class="navigation-radio">
+                        {% for i in image_paths %}
+                        <input type="radio" class="radio-btn" name="radio-btn" id="radio{{ forloop.counter }}">
+                        {% endfor %}
+                    </div>
+                    <!-- <div class="slide">
                             <img src="{% static 'images/CarRental.png' %}" alt="">
                         </div>
                         <div class="slide">
@@ -111,9 +138,9 @@
                         </div>
                         <div class="slide">
                             <img src="banglow.png" alt="">
-                        </div>
-        
-                        <div class="navigation-auto">
+                        </div>  -->
+
+                    <!-- <div class="navigation-auto">
                             <div class="auto-btn1"></div>
                             <div class="auto-btn2"></div>
                             <div class="auto-btn3"></div>
@@ -121,9 +148,9 @@
                             <div class="auto-btn5"></div>
                             <div class="auto-btn6"></div>
                             <div class="auto-btn7"></div>
-                        </div>
-        
-                        <div class="navigation-manual">
+                        </div> -->
+
+                    <!-- <div class="navigation-manual">
                             <label for="radio1" class="manual-btn"></label>
                             <label for="radio2" class="manual-btn"></label>
                             <label for="radio3" class="manual-btn"></label>
@@ -132,98 +159,139 @@
                             <label for="radio6" class="manual-btn"></label>
                             <label for="radio7" class="manual-btn"></label>
                         </div>
-        
-                    </div>
-        
-                </div>
-                <div class="main-text">
-                    <span>
-                        <h1>Just Rent</h1>
-                        <h4>Do something you really like, and hopefully it pays the rent. As far as I'm concerned, that's success.</h4>
-                    </span>
-                </div>
-            </section>
-            
+                         -->
 
-        <div class="underlinemain"></div>
-        <div class="cata">
-            <div class="pic-pic1">
-                <a href="rent.html"><div class="pic1"><li><img src="Furniturerental.png" alt=""></li></div></a>
-                <a href="#"><div class="pic2"><li><img src="banglow.jpg" alt=""></li></div></a>
-            </div>
-            <div class="pic-pic2">
-                <a href="#"><div class="pic3"><li><img src="furniture.jpg" alt=""></li></div></a>
-                <a href="#"><div class="pic4"><li><img src="Furniturerental.png" alt=""></li></div></a>
-            </div>
-            <div class="pic-pic3">
-                <a href="#"><div class="pic5"><li><img src="CarRental.png" alt=""></li></div></a>
-                <a href="#"><div class="pic6"><li><img src="banglow.png" alt=""></li></div></a>
-            </div>
-            <div class="pic-pic4">
-                <a href="#"><div class="pic7"><li><img src="CarRental.webp" alt=""></li></div></a>
-            </div>
-            <div class="pic-pic5">
-                <a href="#"><div class="pic8"><li><img src="mainback.png" alt=""></li></div></a>
-                <a href="#"><div class="pic9"><li><img src="Furniturerental.png" alt=""></li></div></a>
-            </div>
 
+                </div>
+        </section>
+    </div>
+    </div>
+    <div class="main-text">
+        <span>
+            <h1>Just Rent</h1>
+            <h4>Do something you really like, and hopefully it pays the rent. As far as I'm concerned, that's success.
+            </h4>
+        </span>
+    </div>
+
+
+
+    <div class="underlinemain"></div>
+    <div class="cata">
+        <div class="pic-pic1">
+            <a href="rent.html">
+                <div class="pic1">
+                    <li><img src="Furniturerental.png" alt=""></li>
+                </div>
+            </a>
+            <a href="#">
+                <div class="pic2">
+                    <li><img src="banglow.jpg" alt=""></li>
+                </div>
+            </a>
         </div>
-        
+        <div class="pic-pic2">
+            <a href="#">
+                <div class="pic3">
+                    <li><img src="furniture.jpg" alt=""></li>
+                </div>
+            </a>
+            <a href="#">
+                <div class="pic4">
+                    <li><img src="Furniturerental.png" alt=""></li>
+                </div>
+            </a>
+        </div>
+        <div class="pic-pic3">
+            <a href="#">
+                <div class="pic5">
+                    <li><img src="CarRental.png" alt=""></li>
+                </div>
+            </a>
+            <a href="#">
+                <div class="pic6">
+                    <li><img src="banglow.png" alt=""></li>
+                </div>
+            </a>
+        </div>
+        <div class="pic-pic4">
+            <a href="#">
+                <div class="pic7">
+                    <li><img src="CarRental.webp" alt=""></li>
+                </div>
+            </a>
+        </div>
+        <div class="pic-pic5">
+            <a href="#">
+                <div class="pic8">
+                    <li><img src="mainback.png" alt=""></li>
+                </div>
+            </a>
+            <a href="#">
+                <div class="pic9">
+                    <li><img src="Furniturerental.png" alt=""></li>
+                </div>
+            </a>
+        </div>
+
+    </div>
 
 
-        <footer class="footer">
-            <div class="row">
-              <div class="col">
+
+    <footer class="footer">
+        <div class="row">
+            <div class="col">
                 <img src="{% static 'images/PngLogo.png' %}" class="logo-footer">
                 <p>
-                  We are students of Charusat University. Currently we are pursuing the bachelor degree of computer engineering.
-                  
-        
+                    We are students of Charusat University. Currently we are pursuing the bachelor degree of computer
+                    engineering.
+
+
                 </p>
-              </div>
-              <div class="col">
+            </div>
+            <div class="col">
                 <h3>Head Office
-                  <div class="underline"><span></span></div>
+                    <div class="underline"><span></span></div>
                 </h3>
                 <p> SG Highway</p>
                 <p> Near Havmor Factory, Ahemedabad</p>
                 <p>Gujarat, PIN-399001, India</p>
                 <p class="email-id">rec@gmail.com</p>
                 <p></p>
-              </div>
-              <div class="col">
-                <h3>Customer care 
-                  <div class="underline"><span></span></div>
+            </div>
+            <div class="col">
+                <h3>Customer care
+                    <div class="underline"><span></span></div>
                 </h3>
                 <ul>
-                  <li><a href="#">Report </a></li>
-                  <li><a href="#">Return Issues</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Return Policies</a></li>
-                  <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Report </a></li>
+                    <li><a href="#">Return Issues</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Return Policies</a></li>
+                    <li><a href="#">Contact Us</a></li>
                 </ul>
-              </div>
-              <div class="col">
+            </div>
+            <div class="col">
                 <h3>For Updates...
-                  <div class="underline"><span></span></div>
+                    <div class="underline"><span></span></div>
                 </h3>
                 <form>
-                  <i class="fa-regular fa-envelope"></i>
-                  <input type="email" placeholder="Enter your E-mail" required>
-                  <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" placeholder="Enter your E-mail" required>
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
                 </form>
                 <div class="social-icons">
-                  <i class="fa-brands fa-facebook-f"></i>
-                  <i class="fa-brands fa-twitter"></i>
-                  <i class="fa-brands fa-whatsapp"></i>
-                  <i class="fa-brands fa-pinterest"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <i class="fa-brands fa-pinterest"></i>
                 </div>
-              </div>
             </div>
-            <hr>
-            <p class="copyright"> REC.com © 2023 - All Right Reserved</p>
-          </footer>
-        
+        </div>
+        <hr>
+        <p class="copyright"> REC.com © 2023 - All Right Reserved</p>
+    </footer>
+
 
 
 
