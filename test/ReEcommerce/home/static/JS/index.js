@@ -6,16 +6,16 @@ menu.onclick = () => {
     navbar.classList.toggle('open');  
 }
 
-// var counter=1;
-// setInterval(function(){
-//     document.getElementById('radio' + counter).checked = true;
-//     counter++;
+var counter=1;
+setInterval(function(){
+    document.getElementById('radio' + counter).checked = true;
+    counter++;
 
-//     if(counter > 7)
-//     {
-//         counter=1;
-//     }
-// },4000);
+    if(counter > 7)
+    {
+        counter=1;
+    }
+},4000);
 
 
 
