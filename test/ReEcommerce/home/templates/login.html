@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="Rental E-Commerce">
+    <link rel="stylesheet" href="{% static 'styles/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/index.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/login.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/1b798a1e6d.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1>LOGO OF REC</h1>
+    <div class="headingcontainer">
+        <h3>Sign up to see all the ads for and about rent</h3><br>
+        <button type="submit" ><a href="#">Login With Google</a><i class="fa-brands fa-google"></i></button><br>
+        <h2>OR</h2>
+    </div>
+    <div class="maincontainer">
+        <!-- <label for="Firstname"></label> -->
+        <input type="text" name="fname" id="fnmae" placeholder="Enter Firstname" required><br>
+        <input type="text" name="lname" id="lname" placeholder="Enter Lastname" required><br>
+        <input type="number" name="number" id="no" placeholder="Mobile number" aria-required="true"><br>
+        <input type="email" name="email" id="mail" placeholder="Enter email-id" aria-required="true"><br>
+        <input type="password" name="password" id="pword" placeholder="Enter password" required><br>
+        <input type="password" name="password" id="pword" placeholder="Confirm password" required aria-required="true"><br>
+
+    </div>
+    <div class="footcontainer">
+        <button type="submit">Sign-Up</button>
+    </div>
+
+
+
+</body>
+</html>
