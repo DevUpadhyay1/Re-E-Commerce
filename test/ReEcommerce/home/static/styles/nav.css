@@ -135,10 +135,13 @@ nav{
     margin: 0px 0px 0px 15px;
 }
 
-.div1 a,.div2 a{
+.div1 a{
+    margin-top: 10px;
     margin-right: 25px;
 }
-
+.div2 a{
+    margin-right: 25px;
+}
 .main a {
     margin-left: 25px;
     color: var(--text-color);
@@ -231,9 +234,9 @@ nav{
     .div1{
         width: 205px;
         margin-top: 10px;
+        padding-top: 10px;
         padding-top: -3px;
     }
-    
     .navbar a {
         display: block;
         margin: 8px 0;
