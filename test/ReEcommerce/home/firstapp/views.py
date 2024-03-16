@@ -6,6 +6,12 @@ from django.http import HttpResponse
 def Index(request):
     return render(request,'Index.html')
 
+def login(request):
+    return render(request,'login.html')
+
+def rent(request):
+    return render(request,'rent.html')
+
 def Index(request):
     image_paths = [
         'images/banglow.png',
