@@ -1,0 +1,179 @@
+nav{
+    position: sticky;
+    top: 0;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to left, #222327bc, #424255a2, #323540af);
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .form input[type="text"],
+  .form input[type="number"],
+  .form select,
+  .form textarea {
+    width: 98.4%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .file-upload {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0px 0px 10px 0px;
+  }
+  
+  .file-upload input[type='file'] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .file-upload button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .file-upload button:hover {
+    background-color: #0056b3;
+  }
+  
+  .form textarea {
+    height: 100px;
+  }
+  
+  .form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px 20px;
+  }
+  
+  .form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .form div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form input[type="number"],
+  .form select {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .form select {
+    padding: 11px;
+  }
+  
+  #productDescription {
+    margin-right: 10px;
+    max-width: 550px;
+    min-width: 400px;
+    max-height: 456px;
+    min-height: 130px;
+  }
+  
+  .addbtn {
+    display: flex;
+  }
+  
+  
+  /* Rent items */
+  
+  .RentalProducts{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 200px;
+    background-image: linear-gradient(to left, #222327bc, #424255a2, #323540af);
+    border-radius: 5px;
+    min-width: 300px;
+  }
+  
+  .RentalProducts h1{
+  padding: 25px 0px 5px 0px;
+  text-decoration: underline;
+  color: #fff;
+  }
+  
+  .products{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 20px 20px;
+  }
+  
+  .product{
+    margin: 10px 10px;
+    background-color: aliceblue;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .product img{
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .product p{
+    padding-top: 5px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .product h2{
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .product span{
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  
+  @media screen and (max-width: 1390px) {
+  
+    .products{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  @media screen and (max-width: 1060px) {
+  
+    .products{
+      grid-template-columns: 1fr 1fr;
+    }
+  } 
+  @media screen and (max-width: 860px) {
+  
+    .products{
+      grid-template-columns: 1fr;
+    }
+  } 
+  
+  
+  
+  
+  /* Review System */
