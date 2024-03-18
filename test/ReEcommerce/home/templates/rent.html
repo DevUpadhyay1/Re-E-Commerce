@@ -87,10 +87,11 @@
             </div>
             <div id="imagePreview"></div>
             <div>
-                <input type="number" id="productPrice" placeholder="Rent">
+                <input type="number" id="productPrice" placeholder="Rent" min="0">
                 <select id="priceUnit">
                     <option value="month">per Month</option>
                     <option value="day">per Day</option>
+                    <option value="year">per Year</option>
                 </select>
             </div>
             <textarea id="productDescription" placeholder="Product Description"></textarea>
@@ -100,47 +101,131 @@
 
 
 
-
     <div class="RentalProducts">
         <div class="rentheading reveal">
             <h1>Rental Products</h1>
         </div>
 
         <div class="products reveal">
-            
+
             <div class="product">
                 <img src="Apple.jpg" alt="Product 1">
-                <h2>Product 1</h2>
-                <p><span>Rent Per (option):</span> $10</p>
+                <div class="imgname">
+                    <h2>Product det</h2>
+                    <h4><span>4.1</span><i class="ri-star-fill"></i></h4>
+                </div>
+                <div class="itemprice">
+                    <h3><span>₹</span>10</h3>
+                    <h3>/Day</h3>
+                    <h5>312</h5>
+                </div>
                 <p><span>Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="pbottom">
+                    <div class="stars" id="product1">
+                        <span class="star" onclick="rate(1)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(2)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(3)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(4)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(5)"><i class="ri-star-fill"></i></span>
+                    </div>
+                    <button class="rentproduct">Rent</button>
+                </div>
             </div>
 
             <div class="product">
                 <img src="Apple.jpg" alt="Product 1">
-                <h2>Product 1</h2>
-                <p><span>Rent Per (option):</span> $10</p>
+                <div class="imgname">
+                    <h2>Product 1</h2>
+                    <h4><span>4.1</span><i class="ri-star-fill"></i></h4>
+                </div>
+                <div class="itemprice">
+                    <h3><span>₹</span>10</h3>
+                    <h3>/Day</h3>
+                    <h5>312</h5>
+                </div>
                 <p><span>Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="pbottom">
+                    <div class="stars" id="product2">
+                        <span class="star" onclick="rate(1)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(2)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(3)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(4)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(5)"><i class="ri-star-fill"></i></span>
+                    </div>
+                    <button class="rentproduct">Rent</button>
+                </div>
             </div>
 
             <div class="product">
                 <img src="Apple.jpg" alt="Product 1">
-                <h2>Product 1</h2>
-                <p><span>Rent Per (option):</span> $10</p>
+                <div class="imgname">
+                    <h2>Product 1</h2>
+                    <h4><span>4.1</span><i class="ri-star-fill"></i></h4>
+                </div>
+                <div class="itemprice">
+                    <h3><span>₹</span>10</h3>
+                    <h3>/Day</h3>
+                    <h5>312</h5>
+                </div>
                 <p><span>Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="pbottom">
+                    <div class="stars">
+                        <span class="star" onclick="rate(1)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(2)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(3)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(4)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(5)"><i class="ri-star-fill"></i></span>
+                    </div>
+                    <button class="rentproduct">Rent</button>
+                </div>
             </div>
 
             <div class="product">
                 <img src="Apple.jpg" alt="Product 1">
-                <h2>Product 1</h2>
-                <p><span>Rent Per (option):</span> $10</p>
+                <div class="imgname">
+                    <h2>Product 1</h2>
+                    <h4><span>4.1</span><i class="ri-star-fill"></i></h4>
+                </div>
+                <div class="itemprice">
+                    <h3><span>₹</span>10</h3>
+                    <h3>/Day</h3>
+                    <h5>312</h5>
+                </div>
                 <p><span>Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="pbottom">
+                    <div class="stars">
+                        <span class="star" onclick="rate(1)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(2)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(3)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(4)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(5)"><i class="ri-star-fill"></i></span>
+                    </div>
+                    <button class="rentproduct">Rent</button>
+                </div>
             </div>
 
             <div class="product">
                 <img src="Apple.jpg" alt="Product 1">
-                <h2>Product 1</h2>
-                <p><span>Rent Per (option):</span> $10</p>
+                <div class="imgname">
+                    <h2>Product 1</h2>
+                    <h4><span>4.1</span><i class="ri-star-fill"></i></h4>
+                </div>
+                <div class="itemprice">
+                    <h3><span>₹</span>10</h3>
+                    <h3>/Day</h3>
+                    <h5>312</h5>
+                </div>
                 <p><span>Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="pbottom">
+                    <div class="stars">
+                        <span class="star" onclick="rate(1)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(2)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(3)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(4)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(5)"><i class="ri-star-fill"></i></span>
+                    </div>
+                    <button class="rentproduct">Rent</button>
+                </div>
             </div>
 
         </div>
