@@ -42,35 +42,46 @@ function previewImage() {
     reader.readAsDataURL(file);
   }
 }
-  
-  function addProduct() {
-    const productName = document.getElementById('productName').value;
-    const productImage = document.getElementById('productImage').value;
-    const productPriceMonth = document.getElementById('productPriceMonth').value;
-    const productPriceDay = document.getElementById('productPriceDay').value;
-    const productDescription = document.getElementById('productDescription').value;
-  
-    const productData = {
-      name: productName,
-      image: productImage,
-      price_month: productPriceMonth,
-      price_day: productPriceDay,
-      description: productDescription
-    };
-  
-    fetch('/add-product', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(productData)
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Product added:', data);
-    })
-    .catch(error => {
-      console.error('Error adding product:', error);
-    });
+
+
+
+// animations
+
+window.addEventListener('scroll',reveal);
+
+function reveal(){
+  var reveals = document.querySelectorAll('.reveal');
+
+  for(var i=0; i<reveals.length; i++){
+    var windowheight = window.innerHeight;
+    var revealtop = reveals[i].getBoundingClientRect().top;
+    var revealpoint = 100;
+
+    if(revealtop < windowheight-revealpoint){
+      reveals[i].classList.add('active');
+    }
+    else{
+      reveals[i].classList.remove('active');
+    }
+  }
+}
+
+
+
+  let rating = 0;
+
+  function rate(stars) {
+    rating = stars;
+    let allStars = document.querySelectorAll('.star');
+    for (let i = 0; i < allStars.length; i++) {
+      if (i < stars) {
+        allStars[i].classList.add('gold');
+      } else {
+        allStars[i].classList.remove('gold');
+      }
+    }
   }
 
+  document.querySelectorAll('.star')[3].addEventListener('click', function() {
+    rate(4);
+  });

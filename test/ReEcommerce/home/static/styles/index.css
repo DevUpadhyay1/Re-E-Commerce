@@ -22,6 +22,23 @@ section {
     margin-left: 3px;
 }
 
+.main-text {
+    animation: main-text 1s ease;
+}
+
+@keyframes main-text {
+    0% {
+        transform: translateX(20%);
+        opacity: 0;
+
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
 .main-text span {
     display: flex;
     align-items: center;
@@ -52,6 +69,20 @@ section {
     background-color: #000;
     margin: 0px 0px 10px 0px;
     transition: all .5s ease;
+    animation: slider 1s ease;
+}
+
+@keyframes slider {
+    0% {
+        transform: translateX(-20%);
+        opacity: 0;
+
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
 }
 
 .slides {
@@ -100,7 +131,7 @@ section {
 }
 
 #radio1:checked~.first {
-    margin-left: 0;
+    margin-left: 0%;
 }
 
 #radio2:checked~.first {
@@ -179,7 +210,7 @@ section {
 
 
 
-.underlinemain{
+.underlinemain {
     margin: 100px 250px 0px 250px;
     border-bottom: 1.5px solid #00000035;
 }
@@ -193,10 +224,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     margin-top: 70px;
     border: none;
-    background-color: transparent;
 }
 
 .cata li {
@@ -206,10 +235,10 @@ section {
 }
 
 .cata img {
-    overflow: hidden;
     width: 100%;
     height: 100%;
     border-radius: 23px;
+    object-fit: cover;
 }
 
 .pic1,
@@ -242,6 +271,40 @@ section {
 .pic8 {
     margin-top: 90px;
 }
+.picn{
+    display: none;
+}
+
+.reveal.pic-pic1,.pic-pic2{
+    position: relative;
+    transform: translateX(-200px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+.reveal.pic-pic3{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+.reveal.pic-pic4{
+    position: relative;
+    transform: translateX(100px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+.reveal.pic-pic5{
+    position: relative;
+    transform: translateX(200px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+.reveal.active{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+
 
 
 
@@ -294,6 +357,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .moreCategoriesBtn {
@@ -310,4 +374,153 @@ section {
 
 .moreCategoriesBtn:hover {
     background-color: #0057b385;
+}
+
+
+.footer {
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(to right, #004d4d, #663300);
+    color: #fff;
+    padding: 15px 0px 10px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.row p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+}
+
+.col p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.1rem;
+}
+
+.col {
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.col:nth-child(2),
+.col:nth-child(3) {
+    flex-basis: 15%;
+}
+
+.logo-footer {
+    width: 80px;
+    margin-bottom: 30px;
+}
+
+.col h3 {
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.email-id {
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.1rem;
+}
+
+form {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+form .fa-regular {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+form input {
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 0;
+    outline: none;
+}
+
+form button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+form button .fa-solid {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.social-icons .fa-brands {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+hr {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.underline {
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    margin-top: 5px;
+    left: 0;
+    overflow: hidden;
+}
+
+.underline span {
+    width: 165px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
 }
