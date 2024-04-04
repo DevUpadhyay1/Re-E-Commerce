@@ -38,7 +38,8 @@ nav{
 }
 
 .Navbar {
-    background-image: linear-gradient(to left,#222327,#424255,#62697f);
+    /* background-image: linear-gradient(to left,#222327,#424255,#62697f); */
+    background: #212121;
 }
 
 .logo {

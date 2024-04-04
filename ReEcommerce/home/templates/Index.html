@@ -67,11 +67,13 @@
                         <!-- <i class="ri-contacts-book-3-fill"></i> -->
                         Contact Us</a></li>
             </div>
-            <div class="div1">
-                <li><a href="#" class="Notification">
-                        <!-- <i class="ri-contacts-book-3-fill"></i> -->
-                        Notification</a></li>
-            </div>
+            <div id="notification-button" class="div1" onclick="togglePopup()">
+                <li>
+                  <a href="#" class="Notification">
+                    Notification
+                  </a>
+                </li>
+              </div>
 
         </ul>
 
@@ -123,67 +125,39 @@
     </div>
 </div>
 
-<div class="underlinemain">
-    <h1>Categories</h1>
-</div>
-<div class="cata">
-    <div class="pic-pic1 reveal">
-        <a href="rent.html">
-            <div class="pic1">
-                <li><img src="{% static 'images/Furniturerental.png' %}" alt=""></li>
-            </div>
-        </a>
-        <a href="#">
-            <div class="pic2">
-                <li><img src="{% static 'images/banglow.png' %}" alt=""></li>
-            </div>
-        </a>
-    </div>
-    <div class="pic-pic2 reveal">
-        <a href="#">
-            <div class="pic3">
-                <li><img src="{% static 'images/Furniturerental.png' %}" alt=""></li>
-            </div>
-        </a>
-        <a href="#">
-            <div class="pic4">
-                <li><img src="{% static 'images/Furniturerental.png' %}" alt=""></li>
-            </div>
-        </a>
-    </div>
-    <div class="pic-pic3 reveal">
-        <a href="#">
-            <div class="pic5">
-                <li><img src="{% static 'images/CarRental.png' %}" alt=""></li>
-            </div>
-        </a>
-        <a href="#">
-            <div class="pic6">
-                <li><img src="{% static 'images/banglow.png' %}" alt=""></li>
-            </div>
-        </a>
-    </div>
-    <div class="pic-pic4 reveal">
-        <a href="#">
-            <div class="pic7">
-                <li><img src="{% static 'images/CarRental.png' %}" alt=""></li>
-            </div>
-        </a>
-    </div>
-    <div class="pic-pic5 reveal">
-        <a href="#">
-            <div class="pic8">
-                <li><img src="{% static 'images/mainback.png' %}" alt=""></li>
-            </div>
-        </a>
-        <a href="#">
-            <div class="pic9">
-                <li><img src="{% static 'images/Furniturerental.png' %}" alt=""></li>
-            </div>
-        </a>
-    </div>
 
-</div>
+
+
+<div class="underlinemain"></div>
+        <div class="cata-head">
+            <h1>Categories</h1>
+        </div>
+        
+        <div class="cata">
+              
+            <div class="pic-pic1 reveal">
+                <a href="#"><div class="pic1"><li><img src="Furniturerental.png" alt=""></li></div></a>
+                <a href="#"><div class="pic2"><li><img src="banglow.jpg" alt=""></li></div></a>
+            </div>
+            <div class="pic-pic2 reveal">
+                <a href="#"><div class="pic3"><li><img src="furniture.jpg" alt=""></li></div></a>
+                <a href="#"><div class="pic4"><li><img src="Furniturerental.png" alt=""></li></div></a>
+            </div>
+            <div class="pic-pic3 reveal">
+                <a href="#"><div class="pic5"><li><img src="CarRental.png" alt=""></li></div></a>
+                <a href="#"><div class="pic6"><li><img src="banglow.png" alt=""></li></div></a>
+            </div>
+            <div class="pic-pic4 reveal">
+                <a href="#"><div class="pic7"><li><img src="CarRental.webp" alt=""></li></div></a>
+                <a href="#"><div class="picn"><li><img src="Furniturerental.png" alt=""></li></div></a>
+            </div>
+            <div class="pic-pic5 reveal">
+                <a href="#"><div class="pic8"><li><img src="main-1.jpeg" alt=""></li></div></a>
+                <a href="#"><div class="pic9"><li><img src="Furniturerental.png" alt=""></li></div></a>
+            </div>
+
+        </div>
+        <a class="morebtn" href="rent.html"><button class="moreCategoriesBtn">More Categories</button></a>
 
 
 

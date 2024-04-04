@@ -87,10 +87,29 @@
             </div>
             <div id="imagePreview"></div>
             <div>
-                <input type="number" id="productPrice" placeholder="Rent">
+                <input type="number" id="productPrice" placeholder="Rent" min="0">
                 <select id="priceUnit">
                     <option value="month">per Month</option>
                     <option value="day">per Day</option>
+                    <option value="year">per Year</option>
+                </select>
+            </div>
+            <div class="categories">
+                <select id="Categories">   
+                    <option value="car">Car</option>
+                    <option value="home">Home</option>
+                    <option value="camera">Camera</option>
+                    <option value="bike">Bike</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="scooty">Scooty</option>
+                </select>
+                <select id="City">   
+                    <option value="anand">Anand</option>
+                    <option value="nadiad">Nadiad</option>
+                    <option value="ahamdabad">Ahamdabad</option>
+                    <option value="surat">Surat</option>
+                    <option value="rajkot">Rajkot</option>
+                    <option value="vadodara">Vadodara</option>
                 </select>
             </div>
             <textarea id="productDescription" placeholder="Product Description"></textarea>
@@ -100,58 +119,98 @@
 
 
 
-
     <div class="RentalProducts">
         <div class="rentheading reveal">
-            <h1>Rental Products</h1>
+            <h1>Your Products</h1>
         </div>
 
         <div class="products reveal">
-            
+
             <div class="product">
                 <img src="Apple.jpg" alt="Product 1">
-                <h2>Product 1</h2>
-                <p><span>Rent Per (option):</span> $10</p>
+                <div class="imgname">
+                    <h2>Product det</h2>
+                    <h4><span>4.1</span><i class="ri-star-fill"></i></h4>
+                </div>
+                <div class="itemprice">
+                    <h3><span>₹</span>10</h3>
+                    <h3>/Day</h3>
+                    <h5>312</h5>
+                </div>
+                <p><span>Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <!-- <div class="pbottom">
+                    <div class="stars" id="product1">
+                        <span class="star" onclick="rate(1)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(2)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(3)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(4)"><i class="ri-star-fill"></i></span>
+                        <span class="star" onclick="rate(5)"><i class="ri-star-fill"></i></span>
+                    </div>
+                    <button class="rentproduct">Rent</button>
+                </div> -->
+            </div>
+
+            <div class="product">
+                <img src="Apple.jpg" alt="Product 1">
+                <div class="imgname">
+                    <h2>Product 1</h2>
+                    <h4><span>4.1</span><i class="ri-star-fill"></i></h4>
+                </div>
+                <div class="itemprice">
+                    <h3><span>₹</span>10</h3>
+                    <h3>/Day</h3>
+                    <h5>312</h5>
+                </div>
                 <p><span>Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
 
             <div class="product">
                 <img src="Apple.jpg" alt="Product 1">
-                <h2>Product 1</h2>
-                <p><span>Rent Per (option):</span> $10</p>
+                <div class="imgname">
+                    <h2>Product 1</h2>
+                    <h4><span>4.1</span><i class="ri-star-fill"></i></h4>
+                </div>
+                <div class="itemprice">
+                    <h3><span>₹</span>10</h3>
+                    <h3>/Day</h3>
+                    <h5>312</h5>
+                </div>
                 <p><span>Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                
             </div>
 
             <div class="product">
                 <img src="Apple.jpg" alt="Product 1">
-                <h2>Product 1</h2>
-                <p><span>Rent Per (option):</span> $10</p>
+                <div class="imgname">
+                    <h2>Product 1</h2>
+                    <h4><span>4.1</span><i class="ri-star-fill"></i></h4>
+                </div>
+                <div class="itemprice">
+                    <h3><span>₹</span>10</h3>
+                    <h3>/Day</h3>
+                    <h5>312</h5>
+                </div>
                 <p><span>Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                
             </div>
 
             <div class="product">
                 <img src="Apple.jpg" alt="Product 1">
-                <h2>Product 1</h2>
-                <p><span>Rent Per (option):</span> $10</p>
+                <div class="imgname">
+                    <h2>Product 1</h2>
+                    <h4><span>4.1</span><i class="ri-star-fill"></i></h4>
+                </div>
+                <div class="itemprice">
+                    <h3><span>₹</span>10</h3>
+                    <h3>/Day</h3>
+                    <h5>312</h5>
+                </div>
                 <p><span>Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-
-            <div class="product">
-                <img src="Apple.jpg" alt="Product 1">
-                <h2>Product 1</h2>
-                <p><span>Rent Per (option):</span> $10</p>
-                <p><span>Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+               
             </div>
 
         </div>
     </div>
-
-
-    <!-- <div class="container1" id="productContainer"> -->
-
-    <!-- for real more button -->
-
-    <!-- <button id="readMoreBtn">Read More</button> -->
 
 
 
@@ -160,7 +219,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="{% static 'JS/index.js' %}"></script>
+        <script type="text/javascript" src="{% static 'JS/index.js' %}"></script>
 </body>
 
 </html>
