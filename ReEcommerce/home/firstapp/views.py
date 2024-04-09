@@ -1,16 +1,17 @@
 from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.http import HttpResponse
+from table.models import *
 
 # Create your views here.
 def Index(request):
     return render(request,'Index.html')
 
-def login(request):
-    return render(request,'login.html')
-
 def rent(request):
     return render(request,'rent.html')
+
+def categories(request):
+    return render(request,'categories.html')
 
 def Index(request):
     image_paths = [
@@ -35,3 +36,7 @@ def Index(request):
 #         {"image_src": "Furniturerental.png", "link": "#"},
 #     ]
 #     return render(request, 'Index.html', {'data': data})
+
+def show_categories(request):
+    cate = Category.objects.all()
+    return render(request,'Index.html',{'cate':cate})

@@ -1,4 +1,5 @@
 {% load static %}
+{% static "images" as baseUrl %}
 <!DOCTYPE html>
 <html>
 
@@ -11,7 +12,7 @@
     <link rel="stylesheet" href="{% static 'styles/index.css' %}">
     <link rel="stylesheet" href="{% static 'styles/footer.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="{% static 'https://unpkg.com/boxicons@latest/css/boxicons.min.css' %} ">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Rentify</title>
@@ -85,7 +86,7 @@
                 <!-- <div class="Social-Icons"> -->
             </div>
             <div class="div2">
-                <a href="rent" class="Rent">
+                <a href="categories" class="Rent">
                     <!-- <i class="ri-add-circle-fill"></i> -->
                     Rent</a>
                 <!-- </div> -->
@@ -134,12 +135,14 @@
         </div>
         
         <div class="cata">
-              
+            
+            {% for pho in cate %}
             <div class="pic-pic1 reveal">
-                <a href="#"><div class="pic1"><li><img src="Furniturerental.png" alt=""></li></div></a>
-                <a href="#"><div class="pic2"><li><img src="banglow.jpg" alt=""></li></div></a>
+                <a href="#"><div class="pic1"><li><img src="{{pho.img.url}}" alt=""></li></div></a>
+                <a href="#"><div class="pic2"><li><img src="{{pho.img.url}}" alt=""></li></div></a>
             </div>
-            <div class="pic-pic2 reveal">
+            {% endfor %}
+            <!-- <div class="pic-pic2 reveal">
                 <a href="#"><div class="pic3"><li><img src="furniture.jpg" alt=""></li></div></a>
                 <a href="#"><div class="pic4"><li><img src="Furniturerental.png" alt=""></li></div></a>
             </div>
@@ -154,10 +157,10 @@
             <div class="pic-pic5 reveal">
                 <a href="#"><div class="pic8"><li><img src="main-1.jpeg" alt=""></li></div></a>
                 <a href="#"><div class="pic9"><li><img src="Furniturerental.png" alt=""></li></div></a>
-            </div>
+            </div> -->
 
         </div>
-        <a class="morebtn" href="rent.html"><button class="moreCategoriesBtn">More Categories</button></a>
+        <a class="morebtn" href="categories"><button class="moreCategoriesBtn">More Categories</button></a>
 
 
 

@@ -1,13 +1,13 @@
-/* Reset some default browser styles */
+/* Reset some default browser styles
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
-}
+} */
 
 /* Body styles */
-body {
+/* body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     display: flex;
@@ -21,51 +21,51 @@ body {
     width: 100%;
     overflow: hidden;
     background-repeat: no-repeat;
-    /* border-top: 30px solid black;
+    border-top: 30px solid black;
     border-left: 480px solid black;
     border-right: 480px solid black;
-    border-bottom: 30px solid black; */
-}
+    border-bottom: 30px solid black;
+} */
 
 /* Heading styles */
-h1 {
+/* h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 h2 {
     margin-top: 10px;
-    /* margin-bottom: 10px; */
+    /* margin-bottom: 10px; 
 }
 
 /* Heading container styles */
-.headingcontainer {
+/* .headingcontainer {
     text-align: center;
     margin-bottom: 1.5rem;
 }
 
 .headingcontainer h3 {
     font-size: 1.2rem;
-}
+} */
 
 /* Button styles */
-button {
+/* button {
     background-color: #4285f4;
     color: #fff;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
-    /* cursor: pointer; */
+    /* cursor: pointer; 
 }
 
-button:hover {
+/* button:hover {
     background-color: #357ae8;
-}
+}  */
 
 /* Main container styles */
-.box-login{
+/* .box-login{
     box-sizing: border-box;
-    /* border: 1px solid black; */
+    border: 1px solid black; 
     padding: 40px 50px;
     background-color: #fff;
     box-shadow: 1px 6px 10px rgba(0, 0, 0, 0.5);
@@ -75,7 +75,7 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     margin-left: 400px;
-    /* margin-bottom: ; */
+    /* margin-bottom: ; 
 }
 .maincontainer {
     background-color: #fff;
@@ -94,10 +94,125 @@ input[type="password"] {
     margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 /* Footer container styles */
+/* .footcontainer {
+    text-align: center;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+.logo{
+    display:flex;
+    justify-content: center;
+    background: transparent;
+}
+img{
+    width: 20%;
+}
+
+.headingcontainer {
+    text-align: center;
+}
+
+.footcontainer button {
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+    color: #fff;
+    padding: 10px 150px;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #357ae8;
+}
+
+.box-login{
+    box-sizing: border-box;
+    padding: 40px 50px;
+    max-width: 500px;
+    background-color: #fff;
+    box-shadow: 1px 6px 10px rgba(0, 0, 0, 0.50);
+    border-radius: 10px;
+}
+.right-text{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 400px;
+}
+.maincontainer {
+    padding: 20px 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.maincontainer a{
+    display: flex;
+    margin-top: 3px;
+    margin-bottom: -10px;
+    font-size: .8rem;
+    font-weight: 100;
+    margin-left: 5px; 
+    text-decoration: none;
+    justify-content: end;
+    color: #000;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
 .footcontainer {
     text-align: center;
+    margin-bottom: 20px;
+}
+.headingcontainer{
+    display: flex;
+    justify-content: center;
+}
+
+.headingcontainer h6{
+    font-weight: 600;
+}
+
+.headingcontainer button{
+    color: #fff;
+    text-decoration: none;
+    margin: 10px;
+    padding: 11px 13px;
+    border: none;
+    background: rgba(255, 0, 0, 0.795);
+    border-radius: 60%;
+}
+
+.line{
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #00000034;
+    padding: 10px;
 }
