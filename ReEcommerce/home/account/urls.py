@@ -4,5 +4,5 @@ from django.urls.resolvers import URLPattern
 from . import views
 
 urlpatterns = [
-    path('login',views.login_view, name='login'),
+    path('sign-up/',views.register_view, name='sign-up'),
 ]

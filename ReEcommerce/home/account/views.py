@@ -7,7 +7,7 @@ from django.contrib import messages
 from table.models import *
 
 # Create your views here.
-def login_view(request):
+def register_view(request):
 
     if request.method == 'POST':
         form = UserRegisterForm(request.POST or None)
@@ -27,5 +27,5 @@ def login_view(request):
         'form':form
     }
 
-    return render(request,'login.html',context)
+    return render(request,'sign-up.html',context)
 
