@@ -125,6 +125,10 @@ span{
     margin: 0 5px;
 }
 
+.input{
+    display: none;
+}
+
 .alert-danger strong{
     justify-content: center;
     margin-left: 100px;
