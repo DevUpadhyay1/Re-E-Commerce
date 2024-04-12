@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from account.forms import UserRegisterForm
 from django.contrib.auth import login,authenticate
 from django.contrib import messages
+from django.contrib.auth import logout
 from table.models import *
 
 # Create your views here.
@@ -29,3 +30,6 @@ def register_view(request):
 
     return render(request,'sign-up.html',context)
 
+def logout_view(request):
+    logout(request)
+    return redirect("login")
