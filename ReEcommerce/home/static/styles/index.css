@@ -1,5 +1,5 @@
 section {
-    margin: 11vh 0px 0px 0px;
+    margin: 160px 0px 0px 0px;
     font-family: "Poppins", sans-serif;
     padding: 11.9vh;
     overflow: hidden;
@@ -215,9 +215,8 @@ section {
     border-bottom: 1.5px solid #00000035;
 }
 
-.cata-head h1 {
+.cata-head h1{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* padding-bottom: 5px; */
     margin: 25px 0 0 300px;
 }
 
@@ -233,7 +232,7 @@ section {
     display: flex;
     width: 195px;
     height: 230px;
-    margin-bottom: 30px;
+    margin: 0 20px 30px 5px;
 }
 
 .cata img {
@@ -243,28 +242,13 @@ section {
     object-fit: cover;
 }
 
-.reveal.pic-pic1,
-.pic-pic2 {
+.reveal.pic-pic1 {
     position: relative;
+    display: flex;
     transform: translateX(-100px);
     opacity: 0;
     transition: all 1s ease;
 }
-
-.reveal.pic-pic3 {
-    position: relative;
-    transform: translateY(80px);
-    opacity: 0;
-    transition: all 1s ease;
-}
-
-.reveal.pic-pic4,.pic-pic5 {
-    position: relative;
-    transform: translateX(100px);
-    opacity: 0;
-    transition: all 1s ease;
-}
-
 .reveal.active {
     transform: translateX(0px);
     opacity: 1;
@@ -323,12 +307,11 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: -50px;
 }
 
 .moreCategoriesBtn {
-
-    margin-top: 10px;
+    margin-top: -50px;
     padding: 10px 16px;
     background-image: linear-gradient(to left, #222327c6, #424255e2, #62697f);
     color: white;
@@ -344,7 +327,7 @@ section {
 
 
 .footer {
-    width: 100%;
+    width: 120%;
     bottom: 0;
     background: linear-gradient(to right, #004d4d, #663300);
     color: #fff;
@@ -543,3 +526,29 @@ hr {
 .chat-btn:active{
     border-color: #000000;
 }
+
+
+/* Video */
+/* .main-div{
+    border: 10px solid black;    
+}
+
+.main-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media(min-aspect-ratio: 16/9){
+    .main-video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio: 16/9){
+    .main-video{
+        width: 100%;
+        height: auto;
+    }
+} */

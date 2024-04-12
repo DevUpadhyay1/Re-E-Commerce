@@ -96,3 +96,92 @@ function togglePopup() {
     popup.style.display = "none";
   }
 }
+
+var is_visible = false;
+        function see() {
+            var input = document.getElementById('pass');
+            var see = document.getElementById('see');
+
+            if (is_visible) {
+                input.type = 'password';
+                is_visible = false;
+                see.style.color = 'gray';
+            } else {
+                input.type = 'text';
+                is_visible = true;
+                see.style.color = '#262626';
+            }
+        }
+
+
+        function checkForm() {
+            var isValid = true;
+ 
+            var password = document.getElementById("pass").value;
+        
+            if (password.length < 5) {
+                document.getElementById('check1').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('check1').style.display = 'none';
+            }
+        
+            if (!password.match(/[0-9]/)) {
+                document.getElementById('check2').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('check2').style.display = 'none';
+            }
+        
+            if (!password.match(/[^A-Za-z0-9-'']/)) {
+                document.getElementById('check3').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('check3').style.display = 'none';
+            }
+        
+            if (!password.match(/[A-Z]/)) {
+                document.getElementById('check4').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('check4').style.display = 'none';
+            }
+        
+            if (password.includes(' ')) {
+                document.getElementById('check5').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('check5').style.display = 'none';
+            }
+        
+            return isValid;
+        }
+
+
+        function search(){
+          let filter = document.getElementById('find').value.toUpperCase();
+          let item = document.querySelectorAll('.product');
+          let l = document.getElementsByTagName('h2');
+  
+          for(var i=0 ; i<=l.length ; i++){
+              let a = item[i].getElementsByTagName('h2')[0];
+  
+              let value = a.innerHTML || a.innerText || a.textContent;
+  
+              if(value.toUpperCase().indexOf(filter) > -1){
+                  item[i].style.display='';
+              }else{
+                  item[i].style.display='none';
+                  
+              }
+          }
+      }
+
+      document.getElementById("searchBox").addEventListener("click", function() {
+          var input = this.querySelector("input");
+          if (input.style.width === "0") {
+              input.style.width = "300px";
+          } else {
+              input.style.width = "300px";
+          }
+      });
