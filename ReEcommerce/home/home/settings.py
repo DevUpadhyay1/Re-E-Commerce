@@ -144,3 +144,5 @@ JAZZMIN_SETTINGS = {
         'site_brand':"Unlock Convenience, Rent with Ease!",
         'copyright' : "rentify.com"
 }
+
+# AUTH_USER_MODEL = 'account.User'
