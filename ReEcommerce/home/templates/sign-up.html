@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 
 <body>
@@ -18,87 +17,54 @@
         <div class="logo">
             <img src="{% static 'images/Ren3.jpg' %}">
         </div>
-
-        
-        {% comment %} <form method="post" onsubmit="return checkForm()">
-            {% csrf_token %}
-
-            <div class="maincontainer">
-                {{form.username}}
-            </div>
-            <div class="maincontainer">
-                {{form.email}}
-            </div>
-            <div class="maincontainer">
-                {{form.password1}}
-            </div>
-            <div class="maincontainer">
-                {{form.password2}}
-            </div>
-            <div class="footcontainer">
-                <button type="submit">SignUp</button>
-            </div>
-        </form> {% endcomment %}
-
         <form method="post" onsubmit="return checkForm()">
             {% csrf_token %}
-
             <div class="maincontainer">
-                <a><input type="text" name="username" id="username" placeholder="Enter Username" aria-required="true">{{form.username}}</a>
+                <div class="input">
+                    <input type="text" name="username" id="username" placeholder="Enter Username" aria-required="true" value="">{{form.username}}
+                </div>
+                <div class="input">
+                    <input type="email" name="email" id="mail" placeholder="Enter E-mail" aria-required="true" required value="">{{form.email}}
+                </div>
+                <div class="input">
+                    <input type="password" name="password" id="pass" placeholder="Enter Password" aria-required="true" required oninput="check()" value="">{{form.password1}}
+                </div>
+                <div class="input">
+                    <input type="password" name="cpassword" id="cpass" placeholder="Enter Confirm Password" aria-required="true" required value="">{{form.password2}}
+                </div>
+                <div class="set" id="set">
+                    <div id="count">Length : 0</div>
+                    <i id="see" onclick="see()" class="fa-regular fa-eye"></i>
+                </div>
+                <div id="check1" style="display:none;">
+                    <i class="fa-solid fa-check"></i><span>Length more than 5</span>
+                </div>
+                <div id="check2" style="display:none;">
+                    <i class="fa-solid fa-check"></i><span>Contains numerical character</span>
+                </div>
+                <div id="check3" style="display:none;">
+                    <i class="fa-solid fa-check"></i><span>Contains special character</span>
+                </div>
+                <div id="check4" style="display:none;">
+                    <i class="fa-solid fa-check"></i><span>Contains Capital letter</span>
+                </div>
+                <div id="check5" style="display:none;">
+                    <i class="fa-solid fa-check"></i><span>Shouldn't Contains Space</span>
+                </div>
+                <a href="#">Forget Password?</a>
             </div>
-            <div class="maincontainer">
-                <a><input type="email" name="email" id="mail" placeholder="Enter E-mail" aria-required="true" requiredvalue="">{{form.email}}</a>
-            </div>
-            <div class="maincontainer">
-                <a><input type="password" name="password" id="pass" placeholder="Enter Password" aria-required="true"required oninput="check()" value="">{{form.password1}}</a>
-            </div>
-            <div class="maincontainer">
-               <a><input type="password" name="cpassword" id="pass" placeholder="Enter Confirm Password" aria-required="true"required oninput="check()" value=""> {{form.password2}}</a>
-            </div>
-            <div class="set" id="set">
-                <div id="count">Length : 0</div>
-                <i id="see" onclick="see()" class="fa-regular fa-eye"></i>
-            </div>
-            <div id="check1" style="display:none;">
-                <i class="fa-solid fa-check"></i><span>Length more than 5</span>
-            </div>
-            <div id="check2" style="display:none;">
-                <i class="fa-solid fa-check"></i><span>Contains numerical character</span>
-            </div>
-            <div id="check3" style="display:none;">
-                <i class="fa-solid fa-check"></i><span>Contains special character</span>
-            </div>
-            <div id="check4" style="display:none;">
-                <i class="fa-solid fa-check"></i><span>Contains Capital letter</span>
-            </div>
-            <div id="check5" style="display:none;">
-                <i class="fa-solid fa-check"></i><span>Shouldn't Contains Space</span>
-            </div>
-            <a href="#">Forget Password?</a>
-            <div class="footcontainer">
-                <button type="submit" id="Login" onclick="checkForm()">SignUp</button>
-            </div>
-        </form>
-
-        <!-- <div class="maincontainer">
-        <input type="text" name="username" id="username" placeholder="Enter Username" aria-required="true">
-        <input type="email" name="email" id="mail" placeholder="Enter E-mail" aria-required="true">
-        <input type="password" name="password" id="pass" placeholder="Enter Password" aria-required="true">
-        <input type="password" name="cpassword" id="pass" placeholder="Enter Confirm Password" aria-required="true">
-    </div> -->
-
-        <!-- <div class="footcontainer">
-            <button type="submit">SignUp</button>
-        </div> -->
-        {% if form.errors %}
+            {% if form.errors %}
         <div class="alert alert-danger">
             <strong>{{form.errors}}</strong>
         </div>
         {% endif %}
-
-        <div class="line"><a href="login">
-                <h3><b>Do you have an account?</b></h3>
-            </a></div>
+            <div class="footcontainer">
+                <button type="submit" id="Login" onclick="checkForm()">Login</button>
+            </div>
+        </form>
+        <div class="line">
+            <h6>Do you have an account?</h6>
+        </div>
         <div class="headingcontainer">
             <button type="submit" style="background-color: rgb(0, 132, 255);"><i
                     class="fa-brands fa-twitter"></i></button>
@@ -106,9 +72,73 @@
             <button type="submit" style="background-color: rgb(251, 33, 168);"><i
                     class="fa-brands fa-instagram"></i></button>
         </div>
-
     </div>
 
+    <script>
+        var is_visible = false;
+        function see() {
+            var input = document.getElementById('pass');
+            var cinput = document.getElementById('cpass');
+            var see = document.getElementById('see');
+
+            if (is_visible) {
+                input.type = 'password';
+                cinput.type = 'password';
+                is_visible = false;
+                see.style.color = 'gray';
+            } else {
+                input.type = 'text';
+                cinput.type = 'text';
+                is_visible = true;
+                see.style.color = '#262626';
+            }
+        }
+
+
+        function checkForm() {
+            var isValid = true;
+ 
+            var password = document.getElementById("pass").value;
+        
+            if (password.length < 5) {
+                document.getElementById('check1').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('check1').style.display = 'none';
+            }
+        
+            if (!password.match(/[0-9]/)) {
+                document.getElementById('check2').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('check2').style.display = 'none';
+            }
+        
+            if (!password.match(/[^A-Za-z0-9-'']/)) {
+                document.getElementById('check3').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('check3').style.display = 'none';
+            }
+        
+            if (!password.match(/[A-Z]/)) {
+                document.getElementById('check4').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('check4').style.display = 'none';
+            }
+        
+            if (password.includes(' ')) {
+                document.getElementById('check5').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('check5').style.display = 'none';
+            }
+        
+            return isValid;
+        }
+        
+    </script>
 </body>
 
 </html>
