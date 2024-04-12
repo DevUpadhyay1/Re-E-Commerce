@@ -21,16 +21,16 @@
             {% csrf_token %}
             <div class="maincontainer">
                 <div class="input">
-                    <input type="text" name="username" id="username" placeholder="Enter Username" aria-required="true" value="">{{form.username}}
+                    <input style="display: none;" type="text" name="username" id="username" placeholder="Enter Username" aria-required="true" value="">{{form.username}}
                 </div>
                 <div class="input">
-                    <input type="email" name="email" id="mail" placeholder="Enter E-mail" aria-required="true" required value="">{{form.email}}
+                    <input style="display: none;" type="email" name="email" id="mail" placeholder="Enter E-mail" aria-required="true" required value="">{{form.email}}
                 </div>
                 <div class="input">
-                    <input type="password" name="password" id="pass" placeholder="Enter Password" aria-required="true" required oninput="check()" value="">{{form.password1}}
+                    <input style="display: none;" type="password" name="password" id="pass" placeholder="Enter Password" aria-required="true" required oninput="check()" value="">{{form.password1}}
                 </div>
                 <div class="input">
-                    <input type="password" name="cpassword" id="cpass" placeholder="Enter Confirm Password" aria-required="true" required value="">{{form.password2}}
+                    <input style="display: none;" type="password" name="cpassword" id="cpass" placeholder="Enter Confirm Password" aria-required="true" required value="">{{form.password2}}
                 </div>
                 <div class="set" id="set">
                     <div id="count">Length : 0</div>
